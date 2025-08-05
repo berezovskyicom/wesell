@@ -1,0 +1,14 @@
+@import "@/sass/variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-unbounded;
+  line-height: 1.3;
+  text-rendering: optimizeLegibility;
+  background-color: $black-200;
+  color: #FFF;
+}

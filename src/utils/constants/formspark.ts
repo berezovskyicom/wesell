@@ -1,0 +1,6 @@
+const FORMSPARK = {
+  CONTACT_FORM_ID: process.env.FORMSPARK_CONTACT_FORM_ID,
+  ORIGIN: process.env.FORMSPARK_ORIGIN,
+}
+
+export default FORMSPARK

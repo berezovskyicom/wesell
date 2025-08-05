@@ -1,0 +1,54 @@
+{
+  "extends": [
+    "airbnb-base",
+    "next",
+    "./.eslint/rules/import",
+    "./.eslint/rules/react",
+    "./.eslint/rules/typescript"
+  ],
+  "rules": {
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "camelcase": [
+      "error",
+      {
+        "allow": [],
+        "properties": "never"
+      }
+    ],
+    "dot-notation": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}

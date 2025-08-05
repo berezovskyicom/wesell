@@ -1,0 +1,68 @@
+@import "@/sass/variables";
+@import "@/sass/mixins";
+
+.home {
+  &__reviews {
+    padding-top: $header-height;
+    margin-bottom: calc(140px - #{$header-height});
+  }
+
+  &__reviews-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+
+    @include media-up($media-sm) {
+      flex-direction: row;
+    }
+
+    @include media-down($media-md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__reviews-item {
+    flex: 1 1 0;
+    padding: 24px;
+    background: #282F36;
+    background: linear-gradient(112deg, rgba(40, 47, 54, 0.73) -6.08%, rgba(28, 33, 38, 0) 100%);
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+  }
+
+  &__reviews-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__reviews-item-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #A020F0;
+    line-height: 40px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__reviews-item-title {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  &__reviews-item-stars {
+    fill: $yellow-100;
+  }
+
+  &__reviews-item-description {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFFFFF;
+    line-height: 20px;
+  }
+}

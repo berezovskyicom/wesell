@@ -1,0 +1,62 @@
+//
+// Media between
+//
+// Media rule for screen width larger than first breakpoint, but less than second or equal
+// >> min breakpoint (value of screen width), max breakpoint (value of screen width)
+//
+// ```
+// .container {
+//   @include font($size: 16px);
+//   @include media-between($media-md, $media-xl) {
+//     @include font($size: 24px);
+//   }
+// }
+// ```
+//
+@mixin media-between($breakpoint-min, $breakpoint-max) {
+  @media (min-width: $breakpoint-min + 1) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}
+
+//
+// Media down
+//
+// Media rule for screen width equal to breakpoint or less
+// >> breakpoint (value of screen width)
+//
+// ```
+// .container {
+//   width: 1160px;
+//   @include media-down($media-md) {
+//     width: 100%;
+//   }
+// }
+// ```
+//
+@mixin media-down($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+//
+// Media up
+//
+// Media rule for screen width larger than breakpoint (or equal to breakpoint + 1px)
+// >> breakpoint (value of screen width)
+//
+// ```
+// .container {
+//   width: 100%;
+//   @include media-up($media-md) {
+//     width: 1160px;
+//   }
+// }
+// ```
+//
+@mixin media-up($breakpoint) {
+  @media (min-width: $breakpoint + 1) {
+    @content;
+  }
+}

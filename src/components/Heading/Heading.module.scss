@@ -1,0 +1,35 @@
+@import "@/sass/variables";
+@import "@/sass/mixins";
+
+.heading {
+  margin-top: 0;
+  text-align: center;
+
+  &--1 {
+    font-size: 24px;
+
+    @include media-up($media-md) {
+      font-size: 36px;
+    }
+  }
+
+  &--2 {
+    font-size: 24px;
+
+    @include media-up($media-md) {
+      font-size: 32px;
+    }
+  }
+
+  &--2 {
+    margin-bottom: 8px;
+  }
+
+  &--3 {
+    font-size: 16px;
+
+    @include media-up($media-md) {
+      font-size: 24px;
+    }
+  }
+}

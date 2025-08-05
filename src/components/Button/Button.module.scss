@@ -1,0 +1,23 @@
+@import "@/sass/variables";
+
+.button {
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: $yellow-100;
+  font-family: $font-unbounded;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $black-100;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($yellow-100, 0.8);
+  }
+}

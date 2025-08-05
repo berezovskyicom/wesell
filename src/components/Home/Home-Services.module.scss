@@ -1,0 +1,73 @@
+@import "@/sass/variables";
+@import "@/sass/mixins";
+
+.home {
+  &__services {
+    padding-top: $header-height;
+    margin-bottom: 100px;
+    text-align: center;
+
+    @include media-up($media-md) {
+      margin-bottom: 140px;
+    }
+  }
+
+  &__services-description {
+    max-width: 648px;
+    margin: 0 auto 40px auto;
+    font-size: 14px;
+    font-weight: 300;
+    color: $gray-100;
+  }
+
+  &__services-list {
+    display: grid;
+    gap: 24px 16px;
+
+    @include media-up($media-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-up($media-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-up($media-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__services-list-item {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    background: #282F36;
+    background: linear-gradient(112deg, rgba(40, 47, 54, 0.73) -6.08%, rgba(28, 33, 38, 0) 100%);
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+  }
+
+  &__services-list-item-inner {
+    padding: 12px 16px;
+  }
+
+  &__services-list-item-title {
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  &__services-list-item-description {
+    margin: 8px 0 0 0;
+    font-family: $font-montserrat;
+    font-size: 13px;
+    color: $gray-300;
+    text-align: left;
+  }
+
+  &__services-list-item-image {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+}

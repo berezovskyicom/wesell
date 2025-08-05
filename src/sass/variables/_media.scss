@@ -1,0 +1,13 @@
+$media-xs: 320px;
+$media-sm: 566px;
+$media-md: 887px;
+$media-lg: 1200px;
+$media-xl: 1920px;
+
+$media: (
+  xs: $media-xs,
+  sm: $media-sm,
+  md: $media-md,
+  lg: $media-lg,
+  xl: $media-xl
+);
