@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/third-parties": "^15.4.5",
     "@stylistic/eslint-plugin-ts": "^2.6.4",
     "@svgr/webpack": "^8.1.0",
     "@types/lodash-es": "^4.17.12",
