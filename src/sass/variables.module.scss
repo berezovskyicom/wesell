@@ -1,0 +1,10 @@
+// Used to export SCSS variables to TS
+
+@import "variables/colors";
+@import "variables/media";
+
+:export {
+  @each $i, $size in $media {
+    media_#{$i}: $size;
+  }
+}

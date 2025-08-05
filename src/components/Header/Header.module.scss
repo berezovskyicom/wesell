@@ -1,0 +1,138 @@
+@import "@/sass/variables";
+@import "@/sass/mixins";
+
+.header {
+  z-index: 1000;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+  backdrop-filter: blur(10px);
+
+  &--menu-active {
+    backdrop-filter: none;
+    background-color: $black-100;
+  }
+
+  @include media-up($media-md) {
+    backdrop-filter: blur(10px);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__logo {
+    display: flex;
+
+    svg {
+      fill: $yellow-100;
+    }
+  }
+
+  .header__nav {
+    flex-direction: column;
+    align-items: center;
+
+    @include media-up($media-md) {
+      flex-grow: 1;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__nav-link {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media-up($media-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__location {
+    display: none;
+    font-size: 14px;
+
+    @include media-up($media-md) {
+      display: flex;
+      gap: 4px;
+    }
+    
+    svg {
+      fill: $yellow-100;
+    }
+  }
+
+  &__menu {
+    flex-grow: 1;
+    box-sizing: border-box;
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding: 20px;
+    background-color: $black-100;
+    border-bottom: 1px solid $gray-200;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @include media-up($media-md) {
+      position: static;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      width: auto;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &__menu-button {
+    appearance: none;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      transition: fill 0.2s ease-in-out;
+      fill: #FFFFFF;
+    }
+
+    &:hover {
+      svg {
+        fill: $yellow-100;
+      }
+    }
+
+    @include media-up($media-md) {
+      display: none;
+    }
+  }
+}

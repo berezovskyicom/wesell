@@ -1,0 +1,100 @@
+{
+  "rules": {
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "react/button-has-type": "error",
+    "react/destructuring-assignment": [
+      "error",
+      "always"
+    ],
+    "react/jsx-boolean-value": [
+      "error",
+      "never",
+      {
+        "always": []
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      "error",
+      "line-aligned"
+    ],
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react/jsx-curly-newline": [
+      "error",
+      {
+        "multiline": "consistent",
+        "singleline": "consistent"
+      }
+    ],
+    "react/jsx-curly-spacing": [
+      "error",
+      "never",
+      {
+        "allowMultiline": true
+      }
+    ],
+    "react/jsx-equals-spacing": [
+      "error",
+      "never"
+    ],
+    "react/jsx-first-prop-new-line": [
+      "error",
+      "multiline-multiprop"
+    ],
+    "react/jsx-fragments": [
+      "error",
+      "syntax"
+    ],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
+    "react/jsx-max-props-per-line": [
+      "error",
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "error",
+    "react/jsx-pascal-case": "error",
+    "react/jsx-props-no-multi-spaces": "error",
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeClosing": "never"
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line"
+      }
+    ],
+    "react/no-array-index-key": "error",
+    "react/no-children-prop": "error",
+    "react/no-invalid-html-attribute": "error",
+    "react/no-unescaped-entities": "error",
+    "react/self-closing-comp": "error",
+    "react/style-prop-object": "error"
+  }
+}

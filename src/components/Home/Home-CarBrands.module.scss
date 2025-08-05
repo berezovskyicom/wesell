@@ -1,0 +1,28 @@
+@import "@/sass/variables";
+@import "@/sass/mixins";
+
+.home {
+  &__car-brands {
+    margin-bottom: calc(100px - #{$header-height});
+    padding: 32px 0;
+    background: url("/assets/home/car-brands/bg.svg") center center no-repeat;
+
+    @include media-up($media-md) {
+      margin-bottom: calc(140px - #{$header-height});
+    }
+  }
+
+  &__car-brands-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  &__car-brands-image-wrapper {
+    img {
+      max-width: 100%;
+      object-fit: scale-down;
+    }
+  }
+}

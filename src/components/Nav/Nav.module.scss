@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  gap: 24px;
+  
+  &__link {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

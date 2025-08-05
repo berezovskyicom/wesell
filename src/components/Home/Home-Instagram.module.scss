@@ -1,0 +1,52 @@
+@import "@/sass/variables";
+@import "@/sass/mixins";
+
+.instagram {
+  padding-top: 72px;
+  margin: 68px 0;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    @include media-up($media-sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__gallery-tile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 16px;
+
+    &:last-of-type {
+      display: none;
+
+      @include media-up($media-md) {
+        display: grid;
+      }
+    }
+  }
+
+  &__gallery-tile-image {
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &__gallery-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

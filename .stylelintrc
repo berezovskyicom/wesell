@@ -1,0 +1,115 @@
+{
+  "customSyntax": "postcss-scss",
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "ignoreAtRules": [
+          "import",
+          "else"
+        ],
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
+    "block-opening-brace-space-before": "always",
+    "color-hex-case": "upper",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-after": "always-single-line",
+    "indentation": [
+      2,
+      {
+        "ignore": [
+          "inside-parens"
+        ]
+      }
+    ],
+    "length-zero-no-unit": true,
+    "max-empty-lines": 1,
+    "max-nesting-depth": [
+      5,
+      {
+        "ignore": [
+          "blockless-at-rules",
+          "pseudo-classes"
+        ]
+      }
+    ],
+    "number-leading-zero": "always",
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always",
+    "selector-list-comma-newline-after": "always",
+    "selector-pseudo-element-colon-notation": "double",
+    "string-quotes": "double",
+    "order/order": [
+      {
+        "type": "at-rule",
+        "name": "import"
+      },
+      "custom-properties",
+      "dollar-variables",
+      {
+        "type": "at-rule",
+        "name": "function"
+      },
+      {
+        "type": "at-rule",
+        "name": "mixin"
+      },
+      {
+        "type": "at-rule",
+        "name": "extend"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": false
+      },
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "if"
+      },
+      {
+        "type": "at-rule",
+        "name": "else"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule"
+      },
+      {
+        "type": "rule",
+        "selector": "/^&:[\\w-]+$/"
+      },
+      {
+        "type": "rule",
+        "selector": "/^&::[\\w-]+$/"
+      },
+      "rules"
+    ]
+  }
+}
