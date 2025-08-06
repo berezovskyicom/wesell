@@ -1,6 +1,9 @@
+"use client"
+
 import classNames from "classnames"
+import noop from "lodash-es/noop"
 import Link from "next/link"
-import { ReactNode } from "react"
+import { ReactNode, MouseEvent } from "react"
 
 import styles from "./Button.module.scss"
 
@@ -10,6 +13,7 @@ interface IButtonProps {
   disabled?: boolean
   href?: string
   type?: "submit"
+  onClick?: (event: MouseEvent<HTMLElement>) => void
 }
 
 const Button = ({
@@ -18,6 +22,7 @@ const Button = ({
   disabled,
   href,
   type,
+  onClick = noop,
 }: IButtonProps) => {
   const Element = href ? Link : "button"
 
@@ -28,6 +33,7 @@ const Button = ({
       type={type}
       href={(href || undefined) as string}
       prefetch={href ? false : undefined}
+      onClick={onClick}
     >
       {children}
     </Element>
