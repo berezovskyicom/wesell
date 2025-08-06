@@ -22,13 +22,15 @@ const Services = () => (
             className={styles["home__services-list-item"]}
             key={id}
           >
-            <Image
-              className={styles["home__services-list-item-image"]}
-              src={`/assets/home/services/${id}.png`}
-              alt={translate(`home.services.${id}.title`)}
-              width={256}
-              height={156}
-            />
+            <div className={styles["home__services-list-item-image-wrapper"]}>
+              <Image
+                className={styles["home__services-list-item-image"]}
+                src={`/assets/home/services/${id}.png`}
+                alt={translate(`home.services.${id}.title`)}
+                sizes="(min-width: 1200px) 260px, 100vw"
+                fill
+              />
+            </div>
             <div className={styles["home__services-list-item-inner"]}>
               <div className={styles["home__services-list-item-title"]}>
                 {translate(`home.services.${id}.title`)}
