@@ -1,4 +1,10 @@
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
+
 .social {
   padding-top: 72px;
-  margin-bottom: 68px;
+
+  @include media-up($media-md) {
+    margin-bottom: 68px;
+  }
 }
