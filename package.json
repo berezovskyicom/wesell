@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "stylelint": "stylelint \"**/*.scss\"",
     "lint": "next lint"
   },
   "lint-staged": {
@@ -30,8 +31,13 @@
     "eslint": "^8",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-next": "15.4.1",
+    "lint-staged": "^15.2.10",
     "lodash-es": "^4.17.21",
-    "sass": "^1.89.2",
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.90.0",
+    "stylelint": "^16.23.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-order": "^7.0.0",
     "typescript": "^5"
   }
 }

@@ -1,8 +1,8 @@
 {
   "customSyntax": "postcss-scss",
+  "extends": "stylelint-config-standard-scss",
   "plugins": [
-    "stylelint-order",
-    "stylelint-scss"
+    "stylelint-order"
   ],
   "rules": {
     "at-rule-empty-line-before": [
@@ -10,7 +10,9 @@
       {
         "ignoreAtRules": [
           "import",
-          "else"
+          "else",
+          "use",
+          "forward"
         ],
         "except": [
           "first-nested"
@@ -20,20 +22,8 @@
         ]
       }
     ],
-    "block-opening-brace-space-before": "always",
-    "color-hex-case": "upper",
-    "declaration-block-trailing-semicolon": "always",
-    "declaration-colon-space-after": "always-single-line",
-    "indentation": [
-      2,
-      {
-        "ignore": [
-          "inside-parens"
-        ]
-      }
-    ],
+    "color-hex-length": "long",
     "length-zero-no-unit": true,
-    "max-empty-lines": 1,
     "max-nesting-depth": [
       5,
       {
@@ -43,7 +33,6 @@
         ]
       }
     ],
-    "number-leading-zero": "always",
     "rule-empty-line-before": [
       "always-multi-line",
       {
@@ -55,11 +44,7 @@
         ]
       }
     ],
-    "selector-combinator-space-after": "always",
-    "selector-combinator-space-before": "always",
-    "selector-list-comma-newline-after": "always",
     "selector-pseudo-element-colon-notation": "double",
-    "string-quotes": "double",
     "order/order": [
       {
         "type": "at-rule",
@@ -110,6 +95,17 @@
         "selector": "/^&::[\\w-]+$/"
       },
       "rules"
+    ],
+    "selector-class-pattern": ["^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$", {}],
+    "scss/dollar-variable-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-dollar-variable"]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { "ignorePseudoClasses": ["export"] }
     ]
   }
 }

@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .home {
   &__reviews {
@@ -9,8 +9,7 @@
 
   &__reviews-container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     gap: 16px;
     margin-top: 32px;
 
@@ -27,7 +26,7 @@
     flex: 1 1 0;
     padding: 24px;
     background: #282F36;
-    background: linear-gradient(112deg, rgba(40, 47, 54, 0.73) -6.08%, rgba(28, 33, 38, 0) 100%);
+    background: linear-gradient(112deg, rgb(40 47 54 / 73%) -6.08%, rgb(28 33 38 / 0%) 100%);
     border: 1px solid $gray-200;
     border-radius: 8px;
   }

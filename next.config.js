@@ -6,7 +6,7 @@ const svgr = require("./svgr")
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   experimental: {
-    cssChunking: "strict",
+    cssChunking: true,
   },
   webpack(config) {
     return svgr(config)

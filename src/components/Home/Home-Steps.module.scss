@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .home {
   &__steps {
@@ -19,8 +19,7 @@
 
     @include media-up($media-sm) {
       gap: 16px;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       align-items: flex-start;
       justify-content: center;
     }
@@ -82,7 +81,7 @@
     svg {
       width: 20px;
       height: 20px;
-      fill: #FFF;
+      fill: #FFFFFF;
     }
   }
 

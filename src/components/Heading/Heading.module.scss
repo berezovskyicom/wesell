@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .heading {
   margin-top: 0;
@@ -14,15 +14,12 @@
   }
 
   &--2 {
+    margin-bottom: 8px;
     font-size: 24px;
 
     @include media-up($media-md) {
       font-size: 32px;
     }
-  }
-
-  &--2 {
-    margin-bottom: 8px;
   }
 
   &--3 {
