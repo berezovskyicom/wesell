@@ -38,6 +38,7 @@
   }
 
   &__services-list-item {
+    position: relative;
     overflow: hidden;
     box-sizing: border-box;
     display: inline-block;
@@ -65,9 +66,14 @@
     text-align: left;
   }
 
-  &__services-list-item-image {
+  &__services-list-item-image-wrapper {
+    position: relative;
     width: 100%;
-    object-fit: cover;
+    height: 156px;
     filter: brightness(0.8);
+
+    img {
+      object-fit: cover;
+    }
   }
 }

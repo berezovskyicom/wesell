@@ -57,13 +57,14 @@ const Hero = () => {
           ))}
         </div>
       </Container>
-      <Image
-        className={styles["home__hero-image"]}
-        alt="WeSell Service"
-        src="/assets/home/hero/service.png"
-        width={1080}
-        height={444}
-      />
+      <div className={styles["home__hero-image-wrapper"]}>
+        <Image
+          src="/assets/home/hero/service.png"
+          alt="WeSell Service"
+          fill
+          priority
+        />
+      </div>
     </section>
   )
 }

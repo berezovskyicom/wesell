@@ -18,20 +18,11 @@ const Header = () => {
   const translate = useTranslate()
   const [isMenuActive, setIsMenuActive] = useState(false)
 
-  const renderMenu = () => (
-    <>
-      <Nav className={styles["header__nav"]} />
-      <div className={styles["header__contact"]}>
-        <span className={styles["header__location"]}>
-          <LocationIcon />
-          {translate("common.location")}
-        </span>
-        <Button href="/#contact-us">
-          {translate("header.cta")}
-        </Button>
-      </div>
-    </>
-  )
+  const handleLinkClick = () => {
+    if (isMenuActive) {
+      setIsMenuActive(false)
+    }
+  }
 
   return (
     <header
@@ -42,8 +33,8 @@ const Header = () => {
       <Container className={styles["header__inner"]}>
         <Link
           className={styles["header__logo"]}
+          aria-label={translate("common.homepage.aria-label")}
           href="/"
-          prefetch={false}
         >
           <LogoIcon />
         </Link>
@@ -61,7 +52,22 @@ const Header = () => {
             [styles["header__menu--active"]]: isMenuActive,
           })}
         >
-          {renderMenu()}
+          <Nav
+            className={styles["header__nav"]}
+            onLinkClick={handleLinkClick}
+          />
+          <div className={styles["header__contact"]}>
+            <span className={styles["header__location"]}>
+              <LocationIcon />
+              {translate("common.location")}
+            </span>
+            <Button
+              href="/#contact-us"
+              onClick={handleLinkClick}
+            >
+              {translate("header.cta")}
+            </Button>
+          </div>
         </div>
       </Container>
     </header>

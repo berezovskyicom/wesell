@@ -114,11 +114,20 @@
     }
   }
 
-  &__hero-image {
-    width: 100%;
+  &__hero-image-wrapper {
+    position: relative;
     max-width: 1080px;
-    margin-top: -52px;
+    height: 298px;
+    margin: -52px auto 0;
     border-radius: 16px;
     object-fit: cover;
+
+    @include media-up($media-lg) {
+      height: 444px;
+    }
+
+    img {
+      object-fit: cover;
+    }
   }
 }

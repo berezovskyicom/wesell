@@ -1,45 +1,50 @@
+"use client"
+
 import classNames from "classnames"
+import noop from "lodash-es/noop"
 import Link from "next/link"
+import { MouseEvent } from "react"
 import translate from "@/utils/translate"
 
 import styles from "./Nav.module.scss"
 
 interface INavProps {
   className?: string
+  onLinkClick?: (event: MouseEvent<HTMLAnchorElement>) => void
 }
 
-// TODO: Fix i18n keys
 const Nav = ({
   className,
+  onLinkClick = noop,
 }: INavProps) => (
   <nav className={classNames(styles["nav"], className)}>
     <Link
       className={styles["nav__link"]}
       href="/#services"
-      prefetch={false}
+      onClick={onLinkClick}
     >
-      {translate("header.links.services")}
+      {translate("nav.links.services")}
     </Link>
     <Link
       className={styles["nav__link"]}
       href="/#steps"
-      prefetch={false}
+      onClick={onLinkClick}
     >
-      {translate("header.links.steps")}
+      {translate("nav.links.steps")}
     </Link>
     <Link
       className={styles["nav__link"]}
       href="/#reviews"
-      prefetch={false}
+      onClick={onLinkClick}
     >
-      {translate("header.links.reviews")}
+      {translate("nav.links.reviews")}
     </Link>
     <Link
       className={styles["nav__link"]}
       href="/#gallery"
-      prefetch={false}
+      onClick={onLinkClick}
     >
-      {translate("header.links.gallery")}
+      {translate("nav.links.gallery")}
     </Link>
   </nav>
 )

@@ -16,7 +16,7 @@ const montserratFont = Montserrat({
 })
 
 export const generateMetadata = (): Metadata => ({
-  title: "WeSell",
+  title: translate("home.metadata.title"),
   description: translate("home.metadata.description"),
   icons: {
     icon: [
