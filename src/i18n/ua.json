@@ -63,5 +63,6 @@
   "contact-us.form.description": "Опис звернення",
   "contact-us.form.send": "Надіслати!",
   "contact-us.form.send-success": "Готово :)",
+  "contact-us.form.send-error": "Помилка",
   "contact-us.form.telegram": "Зв'язатися через telegram"
 }
