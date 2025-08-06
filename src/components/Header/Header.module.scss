@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .header {
   z-index: 1000;
@@ -10,13 +10,13 @@
   height: $header-height;
   backdrop-filter: blur(10px);
 
+  @include media-up($media-md) {
+    backdrop-filter: blur(10px);
+  }
+
   &--menu-active {
     backdrop-filter: none;
     background-color: $black-100;
-  }
-
-  @include media-up($media-md) {
-    backdrop-filter: blur(10px);
   }
 
   &__inner {
@@ -94,13 +94,6 @@
     background-color: $black-100;
     border-bottom: 1px solid $gray-200;
 
-    &--active {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
     @include media-up($media-md) {
       position: static;
       display: flex;
@@ -111,6 +104,13 @@
       background-color: transparent;
       border: none;
     }
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
   }
 
   &__menu-button {
@@ -119,6 +119,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
+
+    @include media-up($media-md) {
+      display: none;
+    }
 
     svg {
       transition: fill 0.2s ease-in-out;
@@ -129,10 +133,6 @@
       svg {
         fill: $yellow-100;
       }
-    }
-
-    @include media-up($media-md) {
-      display: none;
     }
   }
 }

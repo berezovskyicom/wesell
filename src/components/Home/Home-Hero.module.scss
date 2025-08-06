@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .home {
   &__hero {
@@ -12,10 +12,10 @@
   }
 
   &__hero-title {
-    margin: 0 0 44px 0;
+    margin: 0 0 44px;
 
     @include media-up($media-md) {
-      margin: 0 0 32px 0;
+      margin: 0 0 32px;
     }
   }
 
@@ -69,7 +69,7 @@
     gap: 8px;
     margin-top: 12px;
     font-size: 12px;
-    color: #FFF;
+    color: #FFFFFF;
 
     @include media-up($media-md) {
       font-size: 14px;
@@ -77,7 +77,7 @@
 
     &:hover {
       text-decoration: none;
-      color: rgba(#FFF, 0.8);
+      color: rgba(#FFFFFF, 0.8);
     }
 
     svg {

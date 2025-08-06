@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .home {
   &__services {
@@ -14,7 +14,7 @@
 
   &__services-description {
     max-width: 648px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 40px;
     font-size: 14px;
     font-weight: 300;
     color: $gray-100;
@@ -42,7 +42,7 @@
     box-sizing: border-box;
     display: inline-block;
     background: #282F36;
-    background: linear-gradient(112deg, rgba(40, 47, 54, 0.73) -6.08%, rgba(28, 33, 38, 0) 100%);
+    background: linear-gradient(112deg, rgb(40 47 54 / 73%) -6.08%, rgb(28 33 38 / 0%) 100%);
     border: 1px solid $gray-200;
     border-radius: 8px;
   }
@@ -58,7 +58,7 @@
   }
 
   &__services-list-item-description {
-    margin: 8px 0 0 0;
+    margin: 8px 0 0;
     font-family: $font-montserrat;
     font-size: 13px;
     color: $gray-300;

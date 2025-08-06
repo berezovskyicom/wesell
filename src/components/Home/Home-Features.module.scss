@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .home {
   &__features {
@@ -28,15 +28,15 @@
     padding-bottom: 20px;
     border-bottom: 1px solid $gray-200;
 
-    &:last-of-type {
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
     @include media-up($media-sm) {
       position: relative;
       flex: 1 0 calc(25% - 22px);
       padding: 0;
+      border-bottom: none;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
       border-bottom: none;
     }
 
@@ -48,13 +48,13 @@
         right: 0;
         width: 1px;
         height: 64px;
-        background-color: rgba(#FFF, 0.24);
+        background-color: rgba(#FFFFFF, 0.24);
         transform: rotateZ(20deg) translate(28px, 0);
       }
     }
 
     svg {
-      fill: currentColor;
+      fill: currentcolor;
       margin-bottom: 4px;
     }
   }

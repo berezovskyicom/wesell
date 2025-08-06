@@ -1,5 +1,5 @@
-@import "@/sass/variables";
-@import "@/sass/mixins";
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
 
 .social-cta {
   padding: 52px 12px;
@@ -7,8 +7,7 @@
 
   &__container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
     justify-content: space-between;
     gap: 48px;
@@ -35,8 +34,7 @@
     width: 100%;
 
     @include media-up($media-sm) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       width: fit-content;
     }
   }
@@ -64,4 +62,3 @@
     }
   }
 }
-
