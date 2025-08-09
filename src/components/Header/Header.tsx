@@ -39,6 +39,7 @@ const Header = () => {
           <LogoIcon />
         </Link>
         <button
+          aria-label={translate("header.menu-button.aria-label")}
           className={styles["header__menu-button"]}
           type="button"
           onClick={() => {

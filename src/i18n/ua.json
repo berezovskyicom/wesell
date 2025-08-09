@@ -1,9 +1,12 @@
 {
   "common.homepage.aria-label": "На головну сторінку",
-  "common.instagram.aria-label": "Перейти на інстаграм",
+  "common.instagram.aria-label": "Перейти на Instagram",
+  "common.telegram.aria-label": "Перейти до Telegram",
+  "common.tiktok.aria-label": "Перейти на TikTok",
   "common.location": "м. Київ",
   "common.cta": "Записатися на сервіс",
   "header.cta": "Записатися",
+  "header.menu-button.aria-label": "Відкрити меню сайту",
   "nav.links.services": "Наші послуги",
   "nav.links.steps": "Етапи роботи",
   "nav.links.reviews": "Відгуки",
