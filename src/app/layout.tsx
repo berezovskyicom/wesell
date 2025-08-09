@@ -1,4 +1,4 @@
-import { GoogleTagManager } from "@next/third-parties/google"
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
 import type { Metadata, Viewport } from "next"
 import { Montserrat, Unbounded } from "next/font/google"
 import { ReactNode } from "react"
@@ -40,6 +40,9 @@ export default function RootLayout({
     <html lang="en">
       {process.env.NEXT_PUBLIC_GTM_ID && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+      )}
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       )}
       <body className={`${unboundedFont.variable} ${montserratFont.variable}`}>
         {children}
