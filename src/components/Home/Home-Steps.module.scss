@@ -49,6 +49,7 @@
       }
 
       @include media-up($media-md) {
+        content: "";
         top: 30px;
         left: 98px;
         width: calc(100% - 204px);
