@@ -1,5 +1,6 @@
 import classNames from "classnames"
 import Link from "next/link"
+import useTranslate from "@/hooks/useTranslate"
 import SOCIAL from "@/utils/constants/social"
 import SOCIAL_IDS, { SocialId } from "@/utils/constants/socialIds"
 
@@ -16,6 +17,8 @@ interface ISocialProps {
 const Social = ({
   className,
 }: ISocialProps) => {
+  const translate = useTranslate()
+
   const renderIcon = (id: SocialId) => {
     switch (id) {
       case SOCIAL_IDS.INSTAGRAM:
@@ -34,6 +37,7 @@ const Social = ({
       {SOCIAL.map(({ id, url }) => (
         <Link
           className={styles["social__link"]}
+          aria-label={translate(`common.${id}.aria-label`)}
           key={id}
           href={url}
           prefetch={false}
