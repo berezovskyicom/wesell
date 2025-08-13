@@ -1,5 +1,6 @@
 import find from "lodash-es/find"
 import values from "lodash-es/values"
+import Image from "next/image"
 import Link from "next/link"
 import Container from "@/components/Container"
 import Heading from "@/components/Heading"
@@ -56,6 +57,14 @@ const Hero = () => {
           ))}
         </div>
       </Container>
+      <div className={styles["home__hero-image-wrapper"]}>
+        <Image
+          src="/assets/home/hero/service.png"
+          alt="WeSell Service"
+          fill
+          priority
+        />
+      </div>
     </section>
   )
 }
