@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wesellservice.com
+
+# Sitemaps
+Sitemap: https://wesellservice.com/sitemap.xml
