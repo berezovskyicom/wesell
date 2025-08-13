@@ -25,6 +25,10 @@ export const generateMetadata = (): Metadata => ({
       { url: "/apple-touch-icon.png", sizes: "180x180" },
     ],
   },
+  metadataBase: new URL("https://wesellservice.com"),
+  alternates: {
+    canonical: "/",
+  },
 })
 
 export const viewport: Viewport = {
