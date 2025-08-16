@@ -1,9 +1,16 @@
 "use client"
 
 import classNames from "classnames"
+import replace from "lodash-es/replace"
 import Image from "next/image"
 import Link from "next/link"
-import { useActionState, useMemo } from "react"
+import {
+  FormEvent,
+  useActionState,
+  useMemo,
+  useState,
+} from "react"
+import isMobilePhone from "validator/es/lib/isMobilePhone"
 import Button from "@/components/Button/Button"
 import Container from "@/components/Container"
 import Heading from "@/components/Heading/Heading"
@@ -23,6 +30,7 @@ interface IContactUsProps {
 const ContactUs = ({
   className,
 }: IContactUsProps) => {
+  const [isPhoneError, setIsPhoneError] = useState(false)
   const [state, formAction] = useActionState(submitForm, { success: false, error: "" })
   const translate = useTranslate()
 
@@ -38,9 +46,22 @@ const ContactUs = ({
     return translate("contact-us.form.send")
   }, [state, translate])
 
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    const formData = new FormData(event.currentTarget)
+    const phone = replace(formData.get("phone") as string, /\D/g, "")
+
+    if (!isMobilePhone(phone, "uk-UA")) {
+      event.preventDefault()
+      setIsPhoneError(true)
+      return
+    }
+
+    setIsPhoneError(false)
+  }
+
   return (
     <Container className={classNames(styles["contact-us"], className)}>
-      <form className={styles["contact-us__form"]} action={formAction}>
+      <form className={styles["contact-us__form"]} action={formAction} onSubmit={handleSubmit}>
         <Heading className={styles["contact-us__title"]} type={3}>
           {translate("contact-us.title")}
         </Heading>
@@ -54,18 +75,28 @@ const ContactUs = ({
             required
             type="text"
           />
-          <input
-            className={styles["contact-us__input"]}
-            autoComplete="on"
-            id="tel"
-            name="phone"
-            placeholder={translate("contact-us.form.phone-number")}
-            type="tel"
-            required
-          />
+          <div className={styles["contact-us__input-wrapper"]}>
+            <input
+              className={classNames(styles["contact-us__input"], {
+                [styles["contact-us__input--error"]]: isPhoneError,
+              })}
+              autoComplete="on"
+              id="tel"
+              name="phone"
+              placeholder={translate("contact-us.form.phone-number")}
+              type="tel"
+              required
+            />
+            {isPhoneError && (
+              <span className={styles["contact-us__error"]}>
+                {translate("contact-us.form.invalid-phone")}
+              </span>
+            )}
+          </div>
           <textarea
             className={styles["contact-us__textarea"]}
             id="message"
+            minLength={10}
             name="message"
             placeholder={translate("contact-us.form.description")}
             required

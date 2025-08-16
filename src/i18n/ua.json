@@ -70,5 +70,6 @@
   "contact-us.form.send": "Надіслати!",
   "contact-us.form.send-success": "Готово :)",
   "contact-us.form.send-error": "Помилка",
-  "contact-us.form.telegram": "Зв'язатися через telegram"
+  "contact-us.form.telegram": "Зв'язатися через telegram",
+  "contact-us.form.invalid-phone": "Перевірте номер"
 }
