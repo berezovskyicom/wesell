@@ -4,12 +4,7 @@ import classNames from "classnames"
 import replace from "lodash-es/replace"
 import Image from "next/image"
 import Link from "next/link"
-import {
-  FormEvent,
-  useActionState,
-  useMemo,
-  useState,
-} from "react"
+import { FormEvent, useMemo, useState } from "react"
 import isMobilePhone from "validator/es/lib/isMobilePhone"
 import Button from "@/components/Button/Button"
 import Container from "@/components/Container"
@@ -17,6 +12,7 @@ import Heading from "@/components/Heading/Heading"
 import useTranslate from "@/hooks/useTranslate"
 import ADDRESS from "@/utils/constants/address"
 import TELEGRAM from "@/utils/constants/telegram"
+import botpoison from "@/utils/services/botpoison"
 import submitForm from "@/utils/submitForm"
 
 import TelegramIcon from "@/icons/telegram.svg"
@@ -31,7 +27,7 @@ const ContactUs = ({
   className,
 }: IContactUsProps) => {
   const [isPhoneError, setIsPhoneError] = useState(false)
-  const [state, formAction] = useActionState(submitForm, { success: false, error: "" })
+  const [state, setState] = useState({ success: false, error: "" })
   const translate = useTranslate()
 
   const submitText = useMemo(() => {
@@ -46,7 +42,9 @@ const ContactUs = ({
     return translate("contact-us.form.send")
   }, [state, translate])
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
     const formData = new FormData(event.currentTarget)
     const phone = replace(formData.get("phone") as string, /\D/g, "")
 
@@ -57,11 +55,20 @@ const ContactUs = ({
     }
 
     setIsPhoneError(false)
+
+    const { solution } = await botpoison.challenge()
+    formData.append("_botpoison", solution)
+
+    const result = await submitForm(state, formData)
+    setState(result)
   }
 
   return (
     <Container className={classNames(styles["contact-us"], className)}>
-      <form className={styles["contact-us__form"]} action={formAction} onSubmit={handleSubmit}>
+      <form
+        className={styles["contact-us__form"]}
+        onSubmit={handleSubmit}
+      >
         <Heading className={styles["contact-us__title"]} type={3}>
           {translate("contact-us.title")}
         </Heading>
