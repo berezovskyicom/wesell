@@ -1,6 +1,6 @@
 import classNames from "classnames"
+import { ReactNode, HTMLAttributes } from "react"
 
-import { ReactNode } from "react"
 import styles from "./Heading.module.scss"
 
 const TAGS = {
@@ -9,19 +9,19 @@ const TAGS = {
   3: "h3",
 } as const
 
-interface IHeadingProps {
-  children: ReactNode
+interface IHeadingProps extends HTMLAttributes<HTMLHeadingElement> {
+  children?: ReactNode
   className?: string
   type?: 1 | 2 | 3
 }
 
-// TODO: Rename to Title
 const Heading = ({
   children,
   className,
   type = 2,
+  ...props
 }: IHeadingProps) => {
-  const Element = TAGS[type as keyof typeof TAGS]
+  const Element = TAGS[type]
 
   return (
     <Element
@@ -30,6 +30,7 @@ const Heading = ({
         styles[`heading--${type}`],
         className,
       )}
+      {...props}
     >
       {children}
     </Element>
