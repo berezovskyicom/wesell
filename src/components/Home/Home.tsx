@@ -5,6 +5,7 @@ import Features from "./Home-Features"
 import Footer from "./Home-Footer"
 import Hero from "./Home-Hero"
 import Instagram from "./Home-Instagram"
+import Mission from "./Home-Mission"
 import Reviews from "./Home-Reviews"
 import Services from "./Home-Services"
 import Social from "./Home-Social"
@@ -15,6 +16,7 @@ const Home = () => (
   <>
     <Header />
     <Hero />
+    <Mission />
     <Features />
     <Services />
     <CarBrands />
