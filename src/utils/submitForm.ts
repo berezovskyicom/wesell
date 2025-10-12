@@ -9,6 +9,7 @@ type FormState = {
 
 const submitForm = async (_: FormState, formData: FormData) => {
   const payload = {
+    _botpoison: formData.get("_botpoison"),
     name: formData.get("name"),
     message: formData.get("message"),
     phoneNumber: formData.get("phone"),
