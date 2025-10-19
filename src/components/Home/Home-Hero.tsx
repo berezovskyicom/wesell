@@ -61,7 +61,6 @@ const Hero = () => {
         <Image
           src="/assets/home/hero/service.png"
           alt="WeSell Service"
-          fetchPriority="high"
           fill
           priority
         />
