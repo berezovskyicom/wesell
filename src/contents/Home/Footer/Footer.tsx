@@ -1,7 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import Container from "@/components/Container"
 import Nav from "@/components/Nav"
-import Social from "@/components/Social"
+import SocialLinks from "@/components/SocialLinks"
 import useTranslate from "@/hooks/useTranslate"
 
 import LogoIcon from "@/icons/logo.svg"
@@ -21,7 +23,7 @@ const Footer = () => {
           <LogoIcon className={styles["home__footer-logo"]} />
         </Link>
         <Nav className={styles["home__footer-nav"]} />
-        <Social className={styles["home__footer-social"]} />
+        <SocialLinks className={styles["home__footer-social"]} />
       </Container>
     </footer>
   )

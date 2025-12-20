@@ -1,4 +1,5 @@
 import entries from "lodash-es/entries"
+
 import variables from "@/sass/variables.module.scss"
 
 const MEDIA = Object.fromEntries(

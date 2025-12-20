@@ -1,19 +1,19 @@
 @use "@/sass/variables" as *;
 @use "@/sass/mixins" as *;
 
-.heading {
+.title {
   margin-top: 0;
   text-align: center;
 
-  &--1 {
-    font-size: 24px;
+  &--xs {
+    font-size: 16px;
 
     @include media-up($media-md) {
-      font-size: 36px;
+      font-size: 24px;
     }
   }
 
-  &--2 {
+  &--sm {
     margin-bottom: 8px;
     font-size: 24px;
 
@@ -22,11 +22,11 @@
     }
   }
 
-  &--3 {
-    font-size: 16px;
+  &--md {
+    font-size: 24px;
 
     @include media-up($media-md) {
-      font-size: 24px;
+      font-size: 36px;
     }
   }
 }

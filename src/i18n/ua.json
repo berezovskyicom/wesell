@@ -1,5 +1,8 @@
 {
   "common.homepage.aria-label": "На головну сторінку",
+  "common.instagram": "Instagram",
+  "common.telegram": "Telegram",
+  "common.tiktok": "TikTok",
   "common.instagram.aria-label": "Перейти на Instagram",
   "common.telegram.aria-label": "Перейти до Telegram",
   "common.tiktok.aria-label": "Перейти на TikTok",

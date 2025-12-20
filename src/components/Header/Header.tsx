@@ -8,8 +8,8 @@ import Container from "@/components/Container"
 import Nav from "@/components/Nav"
 import useTranslate from "@/hooks/useTranslate"
 
+import LocationIcon from "./icons/location.svg"
 import MenuIcon from "./icons/menu.svg"
-import LocationIcon from "@/icons/location.svg"
 import LogoIcon from "@/icons/logo.svg"
 
 import styles from "./Header.module.scss"
@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       className={classNames(styles["header"], {
-        [styles["header--menu-active"]]: isMenuActive,
+        [styles["header--active"]]: isMenuActive,
       })}
     >
       <Container className={styles["header__inner"]}>

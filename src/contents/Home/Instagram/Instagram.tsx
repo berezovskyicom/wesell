@@ -1,11 +1,10 @@
-import find from "lodash-es/find"
 import Image from "next/image"
 import Link from "next/link"
 import Container from "@/components/Container"
-import Heading from "@/components/Heading"
+import Title from "@/components/Title"
 import useTranslate from "@/hooks/useTranslate"
-import SOCIAL from "@/utils/constants/social"
-import SOCIAL_IDS from "@/utils/constants/socialIds"
+import SOCIAL_LINKS from "@/utils/constants/socialLinks"
+import Social from "@/utils/types/Social"
 
 import styles from "./Instagram.module.scss"
 
@@ -15,9 +14,9 @@ const Instagram = () => {
   return (
     <section id="gallery" className={styles["home__instagram"]}>
       <Container>
-        <Heading className={styles["home__instagram-title"]}>
+        <Title className={styles["home__instagram-title"]}>
           {translate("home.instagram.title")}
-        </Heading>
+        </Title>
         <div className={styles["home__instagram-gallery"]}>
           <div className={styles["home__instagram-gallery-item"]}>
             <Image
@@ -52,7 +51,7 @@ const Instagram = () => {
           <div className={styles["home__instagram-gallery-profile"]}>
             <Link
               aria-label={translate("common.instagram.aria-label")}
-              href={find(SOCIAL, ["id", SOCIAL_IDS.INSTAGRAM])?.url || ""}
+              href={SOCIAL_LINKS[Social.INSTAGRAM]}
             >
               <Image
                 src="/assets/home/instagram/instagram-phone.png"

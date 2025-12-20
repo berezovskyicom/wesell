@@ -1,31 +1,31 @@
 import Container from "@/components/Container"
-import Heading from "@/components/Heading"
+import Title from "@/components/Title"
 import translate from "@/utils/translate"
 
 import StarsIcon from "./icons/stars.svg"
 
 import styles from "./Reviews.module.scss"
 
-const REVIEW_IDS = {
-  ANGELINA: "angelina",
-  MAX: "max",
-  MIKE: "mike",
+enum Review {
+  ANGELINA = "angelina",
+  MAX = "max",
+  MIKE = "mike",
 }
 
-const REVIEW_IDS_ORDER = [
-  REVIEW_IDS.MIKE,
-  REVIEW_IDS.MAX,
-  REVIEW_IDS.ANGELINA,
+const REVIEWS_ORDER = [
+  Review.MIKE,
+  Review.MAX,
+  Review.ANGELINA,
 ]
 
 const Reviews = () => (
   <section id="reviews">
     <Container className={styles["home__reviews"]}>
-      <Heading>
+      <Title>
         {translate("home.reviews.title")}
-      </Heading>
+      </Title>
       <div className={styles["home__reviews-container"]}>
-        {REVIEW_IDS_ORDER.map(id => (
+        {REVIEWS_ORDER.map(id => (
           <div
             className={styles["home__reviews-item"]}
             key={id}

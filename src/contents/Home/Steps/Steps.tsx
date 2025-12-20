@@ -1,7 +1,8 @@
+"use client"
+
 import Button from "@/components/Button"
 import Container from "@/components/Container"
-
-import Heading from "@/components/Heading"
+import Title from "@/components/Title"
 import translate from "@/utils/translate"
 
 import ConsultancyIcon from "./icons/consultancy.svg"
@@ -16,9 +17,9 @@ import styles from "./Steps.module.scss"
 const Steps = () => (
   <section id="steps">
     <Container className={styles["home__steps"]}>
-      <Heading>
+      <Title>
         {translate("home.steps.title")}
-      </Heading>
+      </Title>
       <div className={styles["home__steps-container"]}>
         <div className={styles["home__step"]}>
           <div className={styles["home__step-icon"]}>

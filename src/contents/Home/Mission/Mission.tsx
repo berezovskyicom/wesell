@@ -1,5 +1,5 @@
 import Container from "@/components/Container"
-import Heading from "@/components/Heading"
+import Title from "@/components/Title"
 import useTranslate from "@/hooks/useTranslate"
 
 import GoalIcon from "./icons/goal.svg"
@@ -14,12 +14,11 @@ const Mission = () => {
   return (
     <section className={styles["home__mission"]}>
       <Container className={styles["home__mission-container"]}>
-        <Heading
+        <Title
           className={styles["home__mission-heading"]}
           dangerouslySetInnerHTML={{
             __html: translate("home.mission.title"),
           }}
-          type={2}
         />
         <div className={styles["home__mission-info"]}>
           <div className={styles["home__mission-info-icon"]}>
