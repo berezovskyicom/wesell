@@ -5,6 +5,7 @@ import Title, { TitleSize } from "@/components/Title"
 import META from "@/utils/constants/meta"
 import translate from "@/utils/translate"
 
+import LocationIcon from "@/icons/location.svg"
 import PhoneIcon from "@/icons/phone.svg"
 import TelegramIcon from "@/icons/telegram.svg"
 
@@ -17,7 +18,11 @@ const Hero = () => (
         {translate("home.hero.title")}
       </Title>
       <div className={styles["home__hero-address-container"]}>
-        {Object.entries(META).map(([address, { phone, telegram }]) => (
+        {Object.entries(META).map(([address, {
+          locationUrl,
+          phone,
+          telegram,
+        }]) => (
           <div
             className={styles["home__hero-address"]}
             key={address}
@@ -25,9 +30,14 @@ const Hero = () => (
             <p className={styles["home__hero-address-title"]}>
               {translate(`home.hero.location-${address}.title`)}
             </p>
-            <div className={styles["home__hero-address-street"]}>
+            <Link
+              className={styles["home__hero-address-street"]}
+              href={locationUrl}
+              target="_blank"
+            >
+              <LocationIcon />
               {translate(`home.hero.location-${address}.street`)}
-            </div>
+            </Link>
             <Link
               className={styles["home__hero-address-phone"]}
               href={`tel:${phone}`}
