@@ -14,7 +14,7 @@
     backdrop-filter: blur(10px);
   }
 
-  &--menu-active {
+  &--active {
     backdrop-filter: none;
     background-color: $black-100;
   }

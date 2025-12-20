@@ -41,9 +41,6 @@
 
   &__link {
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 12px;
     padding: 12px;
     font-size: 14px;
@@ -54,6 +51,7 @@
     transition: border-color 0.2s ease-in-out;
 
     &:hover {
+      opacity: 1;
       border-color: $yellow-100;
     }
 

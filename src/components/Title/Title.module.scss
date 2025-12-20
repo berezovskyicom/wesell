@@ -1,0 +1,32 @@
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
+
+.title {
+  margin-top: 0;
+  text-align: center;
+
+  &--xs {
+    font-size: 16px;
+
+    @include media-up($media-md) {
+      font-size: 24px;
+    }
+  }
+
+  &--sm {
+    margin-bottom: 8px;
+    font-size: 24px;
+
+    @include media-up($media-md) {
+      font-size: 32px;
+    }
+  }
+
+  &--md {
+    font-size: 24px;
+
+    @include media-up($media-md) {
+      font-size: 36px;
+    }
+  }
+}

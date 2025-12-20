@@ -3,8 +3,8 @@
 import FORMSPARK from "@/utils/constants/formspark"
 
 type FormState = {
-  success: boolean
   error: string
+  success: boolean
 }
 
 const submitForm = async (_: FormState, formData: FormData) => {

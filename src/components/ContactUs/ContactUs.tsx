@@ -6,26 +6,26 @@ import Image from "next/image"
 import Link from "next/link"
 import { FormEvent, useMemo, useState } from "react"
 import isMobilePhone from "validator/es/lib/isMobilePhone"
-import Button from "@/components/Button/Button"
+import Button from "@/components/Button"
 import Container from "@/components/Container"
-import Heading from "@/components/Heading/Heading"
+import Title, { TitleSize } from "@/components/Title"
 import useTranslate from "@/hooks/useTranslate"
-import ADDRESS from "@/utils/constants/address"
-import TELEGRAM from "@/utils/constants/telegram"
-import botpoison from "@/utils/services/botpoison"
+import botpoison from "@/services/botpoison"
+import META from "@/utils/constants/meta"
 import submitForm from "@/utils/submitForm"
+import Branch from "@/utils/types/Branch"
 
 import TelegramIcon from "@/icons/telegram.svg"
 
 import styles from "./ContactUs.module.scss"
 
-interface IContactUsProps {
+interface ContactUsProps {
   className?: string
 }
 
 const ContactUs = ({
   className,
-}: IContactUsProps) => {
+}: ContactUsProps) => {
   const [isPhoneError, setIsPhoneError] = useState(false)
   const [state, setState] = useState({ success: false, error: "" })
   const translate = useTranslate()
@@ -69,9 +69,9 @@ const ContactUs = ({
         className={styles["contact-us__form"]}
         onSubmit={handleSubmit}
       >
-        <Heading className={styles["contact-us__title"]} type={3}>
+        <Title className={styles["contact-us__title"]} size={TitleSize.XS}>
           {translate("contact-us.title")}
-        </Heading>
+        </Title>
         <div className={styles["contact-us__inputs"]}>
           <input
             className={styles["contact-us__input"]}
@@ -118,7 +118,7 @@ const ContactUs = ({
             {submitText}
           </Button>
           <Link
-            href={TELEGRAM[ADDRESS.BEREZNIAKY]}
+            href={META[Branch.BEREZNIAKY].telegram}
             prefetch={false}
             className={classNames(
               styles["contact-us__button"],

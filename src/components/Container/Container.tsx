@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 
 import styles from "./Container.module.scss"
 
-interface IContainerProps {
+interface ContainerProps {
   children: ReactNode
   className?: string
 }
@@ -11,7 +11,7 @@ interface IContainerProps {
 const Container = ({
   children,
   className,
-}: IContainerProps) => (
+}: ContainerProps) => (
   <div className={classNames(styles["container"], className)}>
     {children}
   </div>
