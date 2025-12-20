@@ -53,12 +53,25 @@
   }
 
   &__hero-address-street {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 12px;
     font-weight: 300;
     color: $gray-100;
 
     @include media-up($media-md) {
       font-size: 14px;
+    }
+
+    svg {
+      fill: $gray-100;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: rgba($gray-100, 0.8);
     }
   }
 
