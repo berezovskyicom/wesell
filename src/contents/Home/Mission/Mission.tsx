@@ -5,9 +5,10 @@ import useTranslate from "@/hooks/useTranslate"
 import GoalIcon from "./icons/goal.svg"
 import MissionIcon from "./icons/mission.svg"
 
-import styles from "./Home-Mission.module.scss"
+import styles from "./Mission.module.scss"
 
-const HomeMission = () => {
+const Mission = () => {
+  // TODO: Unify, either use translate() or useTranslate()
   const translate = useTranslate()
 
   return (
@@ -15,7 +16,9 @@ const HomeMission = () => {
       <Container className={styles["home__mission-container"]}>
         <Heading
           className={styles["home__mission-heading"]}
-          dangerouslySetInnerHTML={{ __html: translate("home.mission.title") }}
+          dangerouslySetInnerHTML={{
+            __html: translate("home.mission.title"),
+          }}
           type={2}
         />
         <div className={styles["home__mission-info"]}>
@@ -45,4 +48,4 @@ const HomeMission = () => {
   )
 }
 
-export default HomeMission
+export default Mission

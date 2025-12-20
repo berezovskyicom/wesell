@@ -15,7 +15,7 @@ import translate from "@/utils/translate"
 import PhoneIcon from "@/icons/phone.svg"
 import TelegramIcon from "@/icons/telegram.svg"
 
-import styles from "./Home-Hero.module.scss"
+import styles from "./Hero.module.scss"
 
 const Hero = () => {
   const { name: telegramText } = find(SOCIAL, ["id", SOCIAL_IDS.TELEGRAM]) || {}

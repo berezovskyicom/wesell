@@ -11,7 +11,7 @@ import ExecutionIcon from "./icons/execution.svg"
 import PricingIcon from "./icons/pricing.svg"
 import PhoneIcon from "@/icons/phone.svg"
 
-import styles from "./Home-Steps.module.scss"
+import styles from "./Steps.module.scss"
 
 const Steps = () => (
   <section id="steps">

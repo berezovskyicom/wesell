@@ -1,0 +1,8 @@
+@use "@/sass/variables" as *;
+
+.home {
+  &__contact-us {
+    padding-top: $header-height;
+    margin-bottom: 80px;
+  }
+}

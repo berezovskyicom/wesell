@@ -1,0 +1,12 @@
+@use "@/sass/variables" as *;
+@use "@/sass/mixins" as *;
+
+.home {
+  &__social {
+    padding-top: 72px;
+
+    @include media-up($media-md) {
+      margin-bottom: 68px;
+    }
+  }
+}

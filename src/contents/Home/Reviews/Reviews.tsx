@@ -4,7 +4,7 @@ import translate from "@/utils/translate"
 
 import StarsIcon from "./icons/stars.svg"
 
-import styles from "./Home-Reviews.module.scss"
+import styles from "./Reviews.module.scss"
 
 const REVIEW_IDS = {
   ANGELINA: "angelina",

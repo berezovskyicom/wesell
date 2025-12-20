@@ -1,15 +1,17 @@
 @use "@/sass/variables" as *;
 @use "@/sass/mixins" as *;
 
-.instagram {
-  padding-top: 72px;
-  margin: 68px 0;
+.home {
+  &__instagram {
+    padding-top: 72px;
+    margin: 68px 0;
+  }
 
-  &__title {
+  &__instagram-title {
     margin-bottom: 40px;
   }
 
-  &__gallery {
+  &__instagram-gallery {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +23,7 @@
     }
   }
 
-  &__gallery-tile {
+  &__instagram-gallery-item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -37,7 +39,7 @@
     }
   }
 
-  &__gallery-tile-image {
+  &__instagram-gallery-item-image {
     max-width: 100%;
     width: auto;
     margin: 0 auto;
@@ -45,7 +47,7 @@
     border-radius: 8px;
   }
 
-  &__gallery-profile {
+  &__instagram-gallery-profile {
     display: flex;
     align-items: center;
     justify-content: center;

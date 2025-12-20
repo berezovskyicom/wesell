@@ -1,4 +1,4 @@
-import Home from "@/components/Home"
+import Content from "@/contents/Home"
 import translate from "@/utils/translate"
 
 const HomePage = () => {
@@ -22,7 +22,7 @@ const HomePage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Home />
+      <Content />
     </>
   )
 }

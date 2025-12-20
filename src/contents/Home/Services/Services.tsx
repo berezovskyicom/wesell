@@ -4,7 +4,7 @@ import Heading from "@/components/Heading/Heading"
 import { SERVICE_IDS_ORDER } from "@/utils/constants/serviceIds"
 import translate from "@/utils/translate"
 
-import styles from "./Home-Services.module.scss"
+import styles from "./Services.module.scss"
 
 const Services = () => (
   <section id="services">

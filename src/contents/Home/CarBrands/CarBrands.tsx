@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Container from "@/components/Container"
 
-import styles from "./Home-CarBrands.module.scss"
+import styles from "./CarBrands.module.scss"
 
 const CarBrands = () => (
   <section className={styles["home__car-brands"]}>

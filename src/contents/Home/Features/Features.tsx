@@ -6,7 +6,7 @@ import CameraIcon from "./icons/camera.svg"
 import RocketIcon from "./icons/rocket.svg"
 import RotorIcon from "./icons/rotor.svg"
 
-import styles from "./Home-Features.module.scss"
+import styles from "./Features.module.scss"
 
 const Features = () => (
   <Container className={styles["home__features"]}>

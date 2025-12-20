@@ -7,49 +7,49 @@ import useTranslate from "@/hooks/useTranslate"
 import SOCIAL from "@/utils/constants/social"
 import SOCIAL_IDS from "@/utils/constants/socialIds"
 
-import styles from "./Home-Instagram.module.scss"
+import styles from "./Instagram.module.scss"
 
-const HomeInstagram = () => {
+const Instagram = () => {
   const translate = useTranslate()
 
   return (
-    <section id="gallery" className={styles["instagram"]}>
+    <section id="gallery" className={styles["home__instagram"]}>
       <Container>
-        <Heading className={styles["instagram__title"]}>
+        <Heading className={styles["home__instagram-title"]}>
           {translate("home.instagram.title")}
         </Heading>
-        <div className={styles["instagram__gallery"]}>
-          <div className={styles["instagram__gallery-tile"]}>
+        <div className={styles["home__instagram-gallery"]}>
+          <div className={styles["home__instagram-gallery-item"]}>
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["instagram__gallery-item-image"]}
               src="/assets/home/instagram/instagram-1.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-2.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-3.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-4.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
           </div>
-          <div className={styles["instagram__gallery-profile"]}>
+          <div className={styles["home__instagram-gallery-profile"]}>
             <Link
               aria-label={translate("common.instagram.aria-label")}
               href={find(SOCIAL, ["id", SOCIAL_IDS.INSTAGRAM])?.url || ""}
@@ -62,30 +62,30 @@ const HomeInstagram = () => {
               />
             </Link>
           </div>
-          <div className={styles["instagram__gallery-tile"]}>
+          <div className={styles["home__instagram-gallery-item"]}>
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-5.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-6.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-7.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
               height={280}
             />
             <Image
-              className={styles["instagram__gallery-tile-image"]}
+              className={styles["home__instagram-gallery-item-image"]}
               src="/assets/home/instagram/instagram-8.png"
               alt={translate("home.instagram.img.alt")}
               width={180}
@@ -98,4 +98,4 @@ const HomeInstagram = () => {
   )
 }
 
-export default HomeInstagram
+export default Instagram

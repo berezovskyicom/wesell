@@ -6,9 +6,9 @@ import useTranslate from "@/hooks/useTranslate"
 
 import LogoIcon from "@/icons/logo.svg"
 
-import styles from "./Home-Footer.module.scss"
+import styles from "./Footer.module.scss"
 
-const HomeFooter = () => {
+const Footer = () => {
   const translate = useTranslate()
 
   return (
@@ -16,7 +16,7 @@ const HomeFooter = () => {
       <Container className={styles["home__footer-container"]}>
         <Link
           aria-label={translate("common.homepage.aria-label")}
-          href="/"
+          href="/public"
         >
           <LogoIcon className={styles["home__footer-logo"]} />
         </Link>
@@ -27,4 +27,4 @@ const HomeFooter = () => {
   )
 }
 
-export default HomeFooter
+export default Footer
