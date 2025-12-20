@@ -1,5 +1,3 @@
-"use client"
-
 import classNames from "classnames"
 import noop from "lodash-es/noop"
 import Link from "next/link"
@@ -8,7 +6,7 @@ import translate from "@/utils/translate"
 
 import styles from "./Nav.module.scss"
 
-interface INavProps {
+interface NavProps {
   className?: string
   onLinkClick?: (event: MouseEvent<HTMLAnchorElement>) => void
 }
@@ -16,7 +14,7 @@ interface INavProps {
 const Nav = ({
   className,
   onLinkClick = noop,
-}: INavProps) => (
+}: NavProps) => (
   <nav className={classNames(styles["nav"], className)}>
     <Link
       className={styles["nav__link"]}

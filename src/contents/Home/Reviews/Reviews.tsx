@@ -1,5 +1,5 @@
 import Container from "@/components/Container"
-import Heading from "@/components/Heading/Heading"
+import Heading from "@/components/Heading"
 import translate from "@/utils/translate"
 
 import StarsIcon from "./icons/stars.svg"

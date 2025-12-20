@@ -1,5 +1,3 @@
-"use client"
-
 import classNames from "classnames"
 import noop from "lodash-es/noop"
 import Link from "next/link"
@@ -7,7 +5,7 @@ import { ReactNode, MouseEvent } from "react"
 
 import styles from "./Button.module.scss"
 
-interface IButtonProps {
+interface ButtonProps {
   children: ReactNode
   className?: string
   disabled?: boolean
@@ -23,7 +21,7 @@ const Button = ({
   href,
   type,
   onClick = noop,
-}: IButtonProps) => {
+}: ButtonProps) => {
   const Element = href ? Link : "button"
 
   return (

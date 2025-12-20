@@ -9,18 +9,19 @@ const TAGS = {
   3: "h3",
 } as const
 
-interface IHeadingProps extends HTMLAttributes<HTMLHeadingElement> {
+interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   children?: ReactNode
   className?: string
   type?: 1 | 2 | 3
 }
 
+// TODO: Rename to Title
 const Heading = ({
   children,
   className,
   type = 2,
   ...props
-}: IHeadingProps) => {
+}: HeadingProps) => {
   const Element = TAGS[type]
 
   return (

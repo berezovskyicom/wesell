@@ -1,7 +1,7 @@
-import Button from "@/components/Button/Button"
+import Button from "@/components/Button"
 import Container from "@/components/Container"
 
-import Heading from "@/components/Heading/Heading"
+import Heading from "@/components/Heading"
 import translate from "@/utils/translate"
 
 import ConsultancyIcon from "./icons/consultancy.svg"

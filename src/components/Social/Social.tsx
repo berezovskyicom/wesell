@@ -1,3 +1,5 @@
+"use client"
+
 import classNames from "classnames"
 import Link from "next/link"
 import useTranslate from "@/hooks/useTranslate"
@@ -10,13 +12,13 @@ import TikTokIcon from "@/icons/tiktok.svg"
 
 import styles from "./Social.module.scss"
 
-interface ISocialProps {
+interface SocialProps {
   className?: string
 }
 
 const Social = ({
   className,
-}: ISocialProps) => {
+}: SocialProps) => {
   const translate = useTranslate()
 
   const renderIcon = (id: SocialId) => {

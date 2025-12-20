@@ -3,9 +3,9 @@
 import classNames from "classnames"
 import Link from "next/link"
 import { useState } from "react"
-import Button from "@/components/Button/Button"
+import Button from "@/components/Button"
 import Container from "@/components/Container"
-import Nav from "@/components/Nav/Nav"
+import Nav from "@/components/Nav"
 import useTranslate from "@/hooks/useTranslate"
 
 import MenuIcon from "./icons/menu.svg"

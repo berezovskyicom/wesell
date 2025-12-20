@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Container from "@/components/Container"
 import Nav from "@/components/Nav"
-import Social from "@/components/Social/Social"
+import Social from "@/components/Social"
 import useTranslate from "@/hooks/useTranslate"
 
 import LogoIcon from "@/icons/logo.svg"

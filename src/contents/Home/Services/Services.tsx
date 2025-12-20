@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Container from "@/components/Container"
-import Heading from "@/components/Heading/Heading"
+import Heading from "@/components/Heading"
 import { SERVICE_IDS_ORDER } from "@/utils/constants/serviceIds"
 import translate from "@/utils/translate"
 
