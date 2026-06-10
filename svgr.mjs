@@ -46,4 +46,4 @@ const svgr = config => {
   }
 }
 
-module.exports = svgr
+export default svgr
