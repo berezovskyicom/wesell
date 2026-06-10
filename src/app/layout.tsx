@@ -1,17 +1,17 @@
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
 import type { Metadata, Viewport } from "next"
-import { Montserrat, Unbounded } from "next/font/google"
+import { Montserrat as montserrat, Unbounded as unbounded } from "next/font/google"
 import { ReactNode } from "react"
 import translate from "@/utils/translate"
 
 import "./globals.scss"
 
-const unboundedFont = Unbounded({
+const unboundedFont = unbounded({
   variable: "--font-unbounded",
   subsets: ["latin", "cyrillic"],
 })
 
-const montserratFont = Montserrat({
+const montserratFont = montserrat({
   variable: "--font-montserrat",
   subsets: ["latin", "cyrillic"],
 })

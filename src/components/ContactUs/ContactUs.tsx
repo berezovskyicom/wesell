@@ -4,7 +4,7 @@ import classNames from "classnames"
 import replace from "lodash-es/replace"
 import Image from "next/image"
 import Link from "next/link"
-import { FormEvent, useMemo, useState } from "react"
+import { type ComponentProps, useMemo, useState } from "react"
 import isMobilePhone from "validator/es/lib/isMobilePhone"
 import Button from "@/components/Button"
 import Container from "@/components/Container"
@@ -22,6 +22,8 @@ import styles from "./ContactUs.module.scss"
 interface ContactUsProps {
   className?: string
 }
+
+type FormSubmitEvent = Parameters<NonNullable<ComponentProps<"form">["onSubmit"]>>[0]
 
 const ContactUs = ({
   className,
@@ -42,7 +44,7 @@ const ContactUs = ({
     return translate("contact-us.form.send")
   }, [state, translate])
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormSubmitEvent) => {
     event.preventDefault()
 
     const formData = new FormData(event.currentTarget)

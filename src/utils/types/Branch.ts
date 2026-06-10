@@ -1,6 +1,6 @@
 enum Branch {
   BEREZNIAKY = "berezniaky",
-  BORSHAHIVKA = "borshchahivka"
+  BORSHAHIVKA = "borshchahivka",
 }
 
 export default Branch

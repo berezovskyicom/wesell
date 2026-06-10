@@ -1,4 +1,4 @@
-import Content from "@/contents/Home"
+import Content from "@/components/Home"
 import translate from "@/utils/translate"
 
 const HomePage = () => {
