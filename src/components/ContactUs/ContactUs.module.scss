@@ -96,7 +96,8 @@
       box-shadow: 0 0 0 2px rgba($yellow-100, 0.25);
     }
 
-    &--error, &--error:focus {
+    &--error,
+    &--error:focus {
       border: 1px solid $red-100;
       box-shadow: 0 0 0 2px rgba($red-100, 0.25);
     }
